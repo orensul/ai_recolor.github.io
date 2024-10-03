@@ -158,59 +158,35 @@
   </section>
 
 
-  <section class="image-section" style="margin-top: 150px;">
-    <div class="container is-max-desktop" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 30vh; text-align: center; padding: 20px;">
-      <img src="static/images/website_img3.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 15px;">
-      <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
+
+
+
+
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/website_img3.jpg" alt="MY ALT TEXT"/>
+            <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
         Offline evaluation results for our student models. Metrics include (tool-selection score, quality score, final score), and the average final score across the tools (Overall). Results show that FlanT5-base performs very similarly to Llama-2-7b-chat-hf, with only a 0.02 gap (rows 1, 4).
         Interestingly, both models perform better on a test subset with more popular user intents ($r_5$ > $r_3$ > All), where $r_i$ denotes user intents with at least $i$ calls.
-      </p>
+          </p>
+          </div>
+          <div class="item">
+            <img src="static/images/website_img3.jpg" alt="MY ALT TEXT"/>
+            <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
+        Offline evaluation results for our student models. Metrics include (tool-selection score, quality score, final score), and the average final score across the tools (Overall). Results show that FlanT5-base performs very similarly to Llama-2-7b-chat-hf, with only a 0.02 gap (rows 1, 4).
+        Interestingly, both models perform better on a test subset with more popular user intents ($r_5$ > $r_3$ > All), where $r_i$ denotes user intents with at least $i$ calls.
+          </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-
-
-
-
-
-
-<!--  -->
-<!--  &lt;!&ndash; Image carousel &ndash;&gt;-->
-<!--  <section class="hero is-small">-->
-<!--    <div class="hero-body">-->
-<!--      <div class="container">-->
-<!--        <div id="results-carousel" class="carousel results-carousel">-->
-<!--          <div class="item">-->
-<!--            <img src="static/images/website_img1.jpg" alt="MY ALT TEXT"/>-->
-<!--            <h2 class="subtitle has-text-centered">-->
-<!--              A+B: Example input – two analogous texts, describing the animal cell (base) and factory (target). <br/> C: Our algorithm’s output. The nodes are entities (clusters of text spans). Edge width represents similarity between entities in terms of the roles they play in the text. For example, the boxes on the left illustrate the similar roles associated with the red and the pink entities. All the mappings our algorithm found are correct, but two are missing (ribosomes/machines and endoplasmic reticulum/hallways). Showing the mapping along with its justification (the similar roles) renders our output easy to interpret.-->
-<!--            </h2>-->
-<!--          </div>-->
-<!--          <div class="item">-->
-<!--            <img src="static/images/website_img2.jpg" alt="MY ALT TEXT"/>-->
-<!--            <h2 class="subtitle has-text-centered">-->
-<!--              Examples of analogies mined by our method (FMQ). <br/>-->
-<!--              While SBERT was able to find almost only paragraphs on the same topic (self-analogies), <br/> our method has found many close and far analogies which are more abstract.-->
-<!--            </h2>-->
-<!--          </div>-->
-<!--          <div class="item">-->
-<!--            <img src="static/images/website_img3.jpg" alt="MY ALT TEXT"/>-->
-<!--            <h2 class="subtitle has-text-centered">-->
-<!--              Our method identifies the correct mappings 87% of the time for procedural texts from ProPara dataset. <br/>-->
-<!--              Here is an example of a far analogy between how hurricanes form and what causes a volcano to erupt.-->
-<!--            </h2>-->
-<!--          </div>-->
-<!--          <div class="item">-->
-<!--            <img src="static/images/website_img4.jpg" alt="MY ALT TEXT"/>-->
-<!--            <h2 class="subtitle has-text-centered">-->
-<!--              Although not designed for them, our method achieves 94% precision on cognitive-psychology stories. <br/>-->
-<!--              Here is a famous example of an analogy between the stories of a general and a surgeon.-->
-<!--            </h2>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
-<!--  &lt;!&ndash; End image carousel &ndash;&gt;-->
+  <!-- End image carousel -->
 
 <!--  &lt;!&ndash; Youtube video &ndash;&gt;-->
 <!--  <section class="hero is-small is-light" style="margin-top: 100px;">-->
