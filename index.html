@@ -127,7 +127,10 @@
         <source src="static/videos/ai_recolor_3examples.mp4" type="video/mp4">
       </video>
       <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
-        Examples of using the videoLeap app with different user intents, with the same input image asset. Given an input image of the team from a fun day in winery. (1) "Golden hour" will result in more yellow warm temperature and golden tone of the golden hour filter look. (2) "Dark atmosphere" will result in darker colors. (3) "🥶" cold face emoji will result in more blue colors to emphasize the cold temperature and freezing weather.
+        Examples of using the videoLeap app with different user intents, with the same input image asset. Given an input image of the team from a fun day in winery. <br>
+        <b>(1)</b> "Golden hour" will result in more yellow warm temperature and golden tone of the golden hour filter look. <br>
+        <b>(2)</b> "Dark atmosphere" will result in darker colors. <br>
+        <b>(3)</b> 🥶 cold face emoji will result in more blue colors to emphasize the cold temperature and freezing weather.
       </p>
     </div>
   </div>
@@ -142,11 +145,14 @@
     <div class="container is-max-desktop" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 30vh; text-align: center; padding: 20px;">
       <img src="static/images/website_img2.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 15px;">
       <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
-        Our distillation framework approach. (1) We create a dataset by collecting user intents and the output (or potentially multiple outputs, if several users expressed the same intent) of our teacher LLM.  We ensure high quality by keeping outputs users chose to export frequently (one output with the highest export rate per intent).  After data processing, we randomly split the data into training and test sets.
-        (2) We fine-tune a smaller student LLM on our dataset.
-        (3) Offline, we evaluate the student LLM's selection of tools and predicted parameters.
-        (4) To improve fine-tuning in low-data regimes, we use an LLM to augment the training data by generating similar samples (e.g., "cool tone" from "cool morning") to mistakes of the student LLM.
-        (5) If a better student model is found offline, we conduct an online A/B test.
+        Our distillation framework approach. <br>
+        <b>(1)</b> We create a dataset by collecting user intents and the output (or potentially multiple outputs, if several users expressed the same intent) of our teacher LLM.
+        We ensure high quality by keeping outputs users chose to export frequently (one output with the highest export rate per intent).
+        After data processing, we randomly split the data into training and test sets. <br>
+        <b>(2)</b> We fine-tune a smaller student LLM on our dataset. <br>
+        <b>(3)</b> Offline, we evaluate the student LLM's selection of tools and predicted parameters. <br>
+        <b>(4)</b> To improve fine-tuning in low-data regimes, we use an LLM to augment the training data by generating similar samples (e.g., "cool tone" from "cool morning") to mistakes of the student LLM. <br>
+        <b>(5)</b> If a better student model is found offline, we conduct an online A/B test.
       </p>
     </div>
   </section>
@@ -220,18 +226,18 @@
 <!--  </section>-->
   <!-- End paper poster -->
 
-  <!-- BibTex citation -->
-  <section class="section" id="BibTeX" style="margin-top: 100px;">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{sultan2022life,
-  title={Life is a Circus and We are the Clowns: Automatically Finding Analogies between Situations and Processes},
-  author={Sultan, Oren and Shahaf, Dafna},
-  journal={arXiv preprint arXiv:2210.12197},
-  year={2022}
-}</code></pre>
-  </div>
-</section>
+<!--  &lt;!&ndash; BibTex citation &ndash;&gt;-->
+<!--  <section class="section" id="BibTeX" style="margin-top: 100px;">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>@article{sultan2022life,-->
+<!--  title={Life is a Circus and We are the Clowns: Automatically Finding Analogies between Situations and Processes},-->
+<!--  author={Sultan, Oren and Shahaf, Dafna},-->
+<!--  journal={arXiv preprint arXiv:2210.12197},-->
+<!--  year={2022}-->
+<!--}</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
 
   <!-- End BibTeX citation -->
 
