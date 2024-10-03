@@ -40,11 +40,11 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                (1) The Hebrew University of Jerusalem; (2) Lightricks<br>
+                <b>(1)</b> The Hebrew University of Jerusalem; <b>(2)</b> Lightricks<br>
               </span>
               <br>
               <span class="author-block">
-                EMNLP 2024 (Main Conference, Industry Track)
+                <b>EMNLP 2024</b> (Main Conference, Industry Track)
               </span>
             </div>
 
@@ -97,7 +97,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              We present a practical distillation approach to fine-tune LLMs for invoking tools in real-time applications. We focus on visual editing tasks; specifically, we modify images and videos by interpreting user stylistic requests, specified in natural language (``golden hour''), using an LLM to select the appropriate tools and their parameters to achieve the desired visual effect. We found that proprietary LLMs such as GPT-3.5-Turbo show potential in this task, but their high cost and latency make them unsuitable for real-time applications. In our approach, we fine-tune a (smaller) student LLM with guidance from a (larger) teacher LLM and behavioral signals. We introduce offline metrics to evaluate student LLMs. Both online and offline experiments show that our student models manage to match the performance of our teacher model (GPT-3.5-Turbo), significantly reducing costs and latency. Lastly, we show that fine-tuning was improved by 25% in low-data regimes using augmentation.
+              We present a practical distillation approach to fine-tune LLMs for invoking tools in real-time applications. We focus on visual editing tasks; specifically, we modify images and videos by interpreting user stylistic requests, specified in natural language ("golden hour""), using an LLM to select the appropriate tools and their parameters to achieve the desired visual effect. We found that proprietary LLMs such as GPT-3.5-Turbo show potential in this task, but their high cost and latency make them unsuitable for real-time applications. In our approach, we fine-tune a (smaller) student LLM with guidance from a (larger) teacher LLM and behavioral signals. We introduce offline metrics to evaluate student LLMs. Both online and offline experiments show that our student models manage to match the performance of our teacher model (GPT-3.5-Turbo), significantly reducing costs and latency. Lastly, we show that fine-tuning was improved by 25% in low-data regimes using augmentation.
             </p>
           </div>
         </div>
@@ -113,7 +113,7 @@
     <div class="container is-max-desktop" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 30vh; text-align: center; padding: 20px;">
       <img src="static/images/website_img1.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 15px;">
       <h2 class="subtitle">
-        An illustration of our visual editing task. Users input an image/video and specify the desired visual appearance (upper row: source images, middle: user intents). An LLM interprets these intents, selects tools, and sets parameters. The bottom row displays the generated images by applying the LLM's output in our app.  For example, inputting ``Morocco'' (left) results in warm hues typical of Moroccan landscapes, reflecting its deserts.
+        An illustration of our visual editing task. Users input an image/video and specify the desired visual appearance (upper row: source images, middle: user intents). An LLM interprets these intents, selects tools, and sets parameters. The bottom row displays the generated images by applying the LLM's output in our app.  For example, inputting "Morocco" (left) results in warm hues typical of Moroccan landscapes, reflecting its deserts.
       </h2>
     </div>
   </section>
@@ -122,56 +122,76 @@
   <section class="hero teaser" style="margin-top: 100px;">
     <div class="container is-max-desktop" style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; text-align: center;">
       <div class="hero-body">
-        <video poster="" id="tree" autoplay controls muted loop style="width: 40%; height: 400px;">
+        <video poster="" id="tree" autoplay controls muted loop style="width: 60%; height: 400px;">
           <!-- Your video here -->
           <source src="static/videos/ai_recolor_3examples.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle">
-          A+B: Example input – two analogous texts, describing the animal cell (base) and factory (target). <br/>
-          C: Our algorithm’s output. The nodes are entities (clusters of text spans). Edge width represents similarity between entities in terms of the roles they play in the text. For example, the boxes on the left illustrate the similar roles associated with the red and the pink entities. Showing the mapping along with its justification (the similar roles) renders our output easy to interpret.
+          Examples of using the videoLeap app with different user intents, with the same input image asset.
+          Given an input image of the team from a fun day in winery. (1) "Golden hour" will result in more yellow warm temperature and golden tone of the golden hour filter look.
+          (2) "Dark atmosphere" will result in darker colors. (3) "🥶" cold face emoji will result in more blue colors to emphasize the cold temperature and freezing weather.
         </h2>
       </div>
     </div>
   </section>
   <!-- End teaser video -->
 
-  <!-- Image carousel -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <img src="static/images/website_img1.jpg" alt="MY ALT TEXT"/>
-            <h2 class="subtitle has-text-centered">
-              A+B: Example input – two analogous texts, describing the animal cell (base) and factory (target). <br/> C: Our algorithm’s output. The nodes are entities (clusters of text spans). Edge width represents similarity between entities in terms of the roles they play in the text. For example, the boxes on the left illustrate the similar roles associated with the red and the pink entities. All the mappings our algorithm found are correct, but two are missing (ribosomes/machines and endoplasmic reticulum/hallways). Showing the mapping along with its justification (the similar roles) renders our output easy to interpret.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/website_img2.jpg" alt="MY ALT TEXT"/>
-            <h2 class="subtitle has-text-centered">
-              Examples of analogies mined by our method (FMQ). <br/>
-              While SBERT was able to find almost only paragraphs on the same topic (self-analogies), <br/> our method has found many close and far analogies which are more abstract.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/website_img3.jpg" alt="MY ALT TEXT"/>
-            <h2 class="subtitle has-text-centered">
-              Our method identifies the correct mappings 87% of the time for procedural texts from ProPara dataset. <br/>
-              Here is an example of a far analogy between how hurricanes form and what causes a volcano to erupt.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/website_img4.jpg" alt="MY ALT TEXT"/>
-            <h2 class="subtitle has-text-centered">
-              Although not designed for them, our method achieves 94% precision on cognitive-psychology stories. <br/>
-              Here is a famous example of an analogy between the stories of a general and a surgeon.
-            </h2>
-          </div>
-        </div>
-      </div>
+
+
+  <!-- Image Section -->
+  <section class="image-section" style="margin-top: 100px;">
+    <div class="container is-max-desktop" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 30vh; text-align: center; padding: 20px;">
+      <img src="static/images/website_img1.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 15px;">
+      <h2 class="subtitle">
+        Our distillation framework approach. (1) We create a dataset by collecting user intents and the output (or potentially multiple outputs, if several users expressed the same intent) of our teacher LLM.  We ensure high quality by keeping outputs users chose to export frequently (one output with the highest export rate per intent).  After data processing, we randomly split the data into training and test sets.
+        (2) We fine-tune a smaller student LLM on our dataset.
+        (3) Offline, we evaluate the student LLM's selection of tools and predicted parameters.
+        (4) To improve fine-tuning in low-data regimes, we use an LLM to augment the training data by generating similar samples (e.g., "cool tone" from "cool morning") to mistakes of the student LLM.
+        (5) If a better student model is found offline, we conduct an online A/B test.
+      </h2>
     </div>
   </section>
-  <!-- End image carousel -->
+
+
+
+<!--  -->
+<!--  &lt;!&ndash; Image carousel &ndash;&gt;-->
+<!--  <section class="hero is-small">-->
+<!--    <div class="hero-body">-->
+<!--      <div class="container">-->
+<!--        <div id="results-carousel" class="carousel results-carousel">-->
+<!--          <div class="item">-->
+<!--            <img src="static/images/website_img1.jpg" alt="MY ALT TEXT"/>-->
+<!--            <h2 class="subtitle has-text-centered">-->
+<!--              A+B: Example input – two analogous texts, describing the animal cell (base) and factory (target). <br/> C: Our algorithm’s output. The nodes are entities (clusters of text spans). Edge width represents similarity between entities in terms of the roles they play in the text. For example, the boxes on the left illustrate the similar roles associated with the red and the pink entities. All the mappings our algorithm found are correct, but two are missing (ribosomes/machines and endoplasmic reticulum/hallways). Showing the mapping along with its justification (the similar roles) renders our output easy to interpret.-->
+<!--            </h2>-->
+<!--          </div>-->
+<!--          <div class="item">-->
+<!--            <img src="static/images/website_img2.jpg" alt="MY ALT TEXT"/>-->
+<!--            <h2 class="subtitle has-text-centered">-->
+<!--              Examples of analogies mined by our method (FMQ). <br/>-->
+<!--              While SBERT was able to find almost only paragraphs on the same topic (self-analogies), <br/> our method has found many close and far analogies which are more abstract.-->
+<!--            </h2>-->
+<!--          </div>-->
+<!--          <div class="item">-->
+<!--            <img src="static/images/website_img3.jpg" alt="MY ALT TEXT"/>-->
+<!--            <h2 class="subtitle has-text-centered">-->
+<!--              Our method identifies the correct mappings 87% of the time for procedural texts from ProPara dataset. <br/>-->
+<!--              Here is an example of a far analogy between how hurricanes form and what causes a volcano to erupt.-->
+<!--            </h2>-->
+<!--          </div>-->
+<!--          <div class="item">-->
+<!--            <img src="static/images/website_img4.jpg" alt="MY ALT TEXT"/>-->
+<!--            <h2 class="subtitle has-text-centered">-->
+<!--              Although not designed for them, our method achieves 94% precision on cognitive-psychology stories. <br/>-->
+<!--              Here is a famous example of an analogy between the stories of a general and a surgeon.-->
+<!--            </h2>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--  &lt;!&ndash; End image carousel &ndash;&gt;-->
 
   <!-- Youtube video -->
   <section class="hero is-small is-light">
