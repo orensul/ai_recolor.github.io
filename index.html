@@ -127,39 +127,34 @@
   <!-- End paper abstract -->
 
 
-
-  <!-- Image Section -->
-  <section class="image-section" style="margin-top: 150px;">
-  <div class="container is-max-desktop" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 30vh; text-align: center; padding: 20px;">
+<!-- Image Section for "Our Task" -->
+<section class="image-section" style="margin-top: 150px;">
+  <div class="container is-max-desktop" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
     <h2 class="title is-3">Our Task</h2>
-    <img src="static/images/website_img1.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 15px;">
+    <img src="static/images/website_img1.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 30px;"> <!-- Increased margin-bottom -->
     <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
       An illustration of our visual editing task. Users input an image/video and specify the desired visual appearance (upper row: source images, middle: user intents). An LLM interprets these intents, selects tools, and sets parameters. The bottom row displays the generated images by applying the LLM's output in our app. For example, inputting "Morocco" (left) results in warm hues typical of Moroccan landscapes, reflecting its deserts.
     </p>
   </div>
 </section>
 
-
-
-
-
-  <!-- Image Section -->
-  <section class="image-section" style="margin-top: 200px;">
-    <div class="container is-max-desktop" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 30vh; text-align: center; padding: 20px;">
-      <h2 class="title is-3">Our Distillation Framework</h2>
-      <img src="static/images/website_img2.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 15px;">
-      <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
-        Our distillation framework approach. <br>
-        <b>(1)</b> We create a dataset by collecting user intents and the output (or potentially multiple outputs, if several users expressed the same intent) of our teacher LLM.
-        We ensure high quality by keeping outputs users chose to export frequently (one output with the highest export rate per intent).
-        After data processing, we randomly split the data into training and test sets. <br>
-        <b>(2)</b> We fine-tune a smaller student LLM on our dataset. <br>
-        <b>(3)</b> Offline, we evaluate the student LLM's selection of tools and predicted parameters. <br>
-        <b>(4)</b> To improve fine-tuning in low-data regimes, we use an LLM to augment the training data by generating similar samples (e.g., "cool tone" from "cool morning") to mistakes of the student LLM. <br>
-        <b>(5)</b> If a better student model is found offline, we conduct an online A/B test.
-      </p>
-    </div>
-  </section>
+<!-- Image Section for "Our Distillation Framework" -->
+<section class="image-section" style="margin-top: 150px;"> <!-- Adjusted margin-top -->
+  <div class="container is-max-desktop" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+    <h2 class="title is-3">Our Distillation Framework</h2>
+    <img src="static/images/website_img2.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 30px;"> <!-- Increased margin-bottom -->
+    <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
+      Our distillation framework approach. <br>
+      <b>(1)</b> We create a dataset by collecting user intents and the output (or potentially multiple outputs, if several users expressed the same intent) of our teacher LLM.
+      We ensure high quality by keeping outputs users chose to export frequently (one output with the highest export rate per intent).
+      After data processing, we randomly split the data into training and test sets. <br>
+      <b>(2)</b> We fine-tune a smaller student LLM on our dataset. <br>
+      <b>(3)</b> Offline, we evaluate the student LLM's selection of tools and predicted parameters. <br>
+      <b>(4)</b> To improve fine-tuning in low-data regimes, we use an LLM to augment the training data by generating similar samples (e.g., "cool tone" from "cool morning") to mistakes of the student LLM. <br>
+      <b>(5)</b> If a better student model is found offline, we conduct an online A/B test.
+    </p>
+  </div>
+</section>
 
 
 
