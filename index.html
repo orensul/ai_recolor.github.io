@@ -132,7 +132,7 @@
 <section class="image-section" style="margin-top: 100px;">
   <div class="container is-max-desktop" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
     <h2 class="title is-3">Our Task</h2>
-    <img src="static/images/website_img1.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 30px;"> <!-- Increased margin-bottom -->
+    <img src="static/images/our_task.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 30px;"> <!-- Increased margin-bottom -->
     <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
       An illustration of our visual editing task. Users input an image/video and specify the desired visual appearance (upper row: source images, middle: user intents). An LLM interprets these intents, selects tools, and sets parameters. The bottom row displays the generated images by applying the LLM's output in our app. For example, inputting "Morocco" (left) results in warm hues typical of Moroccan landscapes, reflecting its deserts.
     </p>
@@ -143,9 +143,8 @@
 <section class="image-section" style="margin-top: 100px;"> <!-- Adjusted margin-top -->
   <div class="container is-max-desktop" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
     <h2 class="title is-3">Our Distillation Framework</h2>
-    <img src="static/images/website_img2.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 30px;"> <!-- Increased margin-bottom -->
+    <img src="static/images/distillation_approach.jpg" alt="Website" style="max-width: 80%; height: auto; margin-bottom: 30px;"> <!-- Increased margin-bottom -->
     <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
-      Our distillation framework approach. <br>
       <b>(1)</b> We create a dataset by collecting user intents and the output (or potentially multiple outputs, if several users expressed the same intent) of our teacher LLM.
       We ensure high quality by keeping outputs users chose to export frequently (one output with the highest export rate per intent).
       After data processing, we randomly split the data into training and test sets. <br>
@@ -167,7 +166,8 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel" style="display: flex; justify-content: center; align-items: center;">
         <div class="item" style="text-align: center;">
-          <img src="static/images/website_img3.jpg" style="max-width: 80%; height: auto; margin-bottom: 15px;">
+          <img src="static/images/offline_eval_results.jpg" style="max-width: 80%; height: auto; margin-bottom: 15px;">
+          <h2 class="title is-3">Experiments</h2>
           <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
             Offline evaluation results for our student models. Metrics include (tool-selection score, quality score, final score), and the average final score across the tools (Overall).
             Results show that FlanT5-base performs very similarly to Llama-2-7b-chat-hf, with only a 0.02 gap (rows 1, 4).
@@ -175,11 +175,11 @@
           </p>
         </div>
         <div class="item" style="text-align: center;">
-          <img src="static/images/website_img3.jpg" style="max-width: 80%; height: auto; margin-bottom: 15px;">
+          <img src="static/images/aug_results.jpg" style="max-width: 80%; height: auto; margin-bottom: 15px;">
           <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
-            Offline evaluation results for our student models. Metrics include (tool-selection score, quality score, final score), and the average final score across the tools (Overall).
-            Results show that FlanT5-base performs very similarly to Llama-2-7b-chat-hf, with only a 0.02 gap (rows 1, 4).
-            Interestingly, both models perform better on a test subset with more popular user intents (r_5 > r_3 > All), where r_i denotes user intents with at least i calls.
+            FlanT5-base’s performance in subsets of the train set, with and without augmentation.
+            We can see that augmentation is effective in limited data increasing the overall score by 0.13 for the 1/8 sample.
+            With larger training subsets, the proportion of augmentations (%) decreases, reducing overall improvement as expected.
           </p>
         </div>
       </div>
