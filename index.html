@@ -188,6 +188,19 @@
           </p>
         </div>
         <div class="item" style="text-align: center;">
+          <img src="static/images/online_ab_test_exps.jpg" style="max-width: 80%; height: auto; margin-bottom: 15px;">
+          <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
+             In addition to offline evaluation, we conducted two online A/B tests.
+             First, we compared our teacher, GPT-3.5-Turbo (tested on 94,317 projects), with Llama-2-7b-chat-hf (93,495 projects).
+             We measured project completion rates as an indicator of user satisfaction.
+            The completion rate for the teacher was 96.1% of that of Llama-2-7b-chat-hf (no statistical significance). Thus, we conclude they are comparable.  <br>
+            In our second A/B test, we compared our student models. FlanT5-base (tested on 20,294 projects) achieved a completion rate of 99% of that of Llama-2-7b-chat-hf (20,282 projects).
+            Thus, we conclude they are comparable and choose FlanT5-base for its lower latency and cost. <br>
+            Importantly, we are encouraged by the fact that our offline metrics align with the results of the online A/B tests
+          </p>
+        </div>
+
+        <div class="item" style="text-align: center;">
           <img src="static/images/exp2.jpg" style="max-width: 80%; height: auto; margin-bottom: 15px;">
           <p class="subtitle" style="text-align: left; max-width: 80%; margin: 20px auto 0;">
             FlanT5-base’s performance in subsets of the train set, with and without augmentation.
